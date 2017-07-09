@@ -1,4 +1,4 @@
-#FreeCodeCamp
+# FreeCodeCamp
 
 一個以node.js所寫的排行榜，分數來源是<a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a>
 
@@ -16,7 +16,7 @@
 * 爬蟲
   * python
 
-##How to start
+## How to start
 ```
 # run python parser
 python public/json/fcc.py
@@ -26,7 +26,15 @@ npm install
 npm start
 ```
 
-##架設環境
+## 架設環境
 * debian 8.4 jessie
 * node.js 6.2.1
 * python 2.7.12
+
+## Crontab Usage:
+* crontab [-l|-e|-r]
+	* -l: list all crontab jobs
+	* -e: edit crontab jobs
+	* -r: remove crontab job
+
+`1 * * * * cd ~/htdoc/FCCRank/public/json && python fcc.py`
