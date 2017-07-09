@@ -7,7 +7,7 @@ import lxml
 import json
 
 
-sheet_src = '1PCCnOeg4gbIFhPT5H2wuo6gWHnobt0hCdJSZLCyAXaA'
+sheet_src = '1iyWPGDBz1wKwhbJ8c_UWw0EklHD8w6X90xcCLvCMSA0'
 url = 'https://spreadsheets.google.com/feeds/list/' + sheet_src + '/1/public/values?alt=json'
 
 username = []
@@ -36,6 +36,7 @@ for name in username:
   challenges = data.select('table tr')
   challenge = []
   for j in range(1, len(challenges)):
+    # print challenges[j]
     select = challenges[j].select('td:nth-of-type(1)')[0].get_text()
     # print select
     challenge.append(select)
@@ -43,5 +44,5 @@ for name in username:
   i+=1
 
 # print json.dumps(fcc_info)
-with open('/home/sakamoto/FCCrank/public/json/result.json', 'w') as f:
+with open('/Users/yoyoelf/htdoc/FCCRank/public/json/result.json', 'w') as f:
   json.dump(fcc_info, f)
