@@ -24,6 +24,8 @@ body {
     #fcc .content span {
       font-size: 32px;
       padding-right: 5px; }
+  #fcc .column {
+    width: 20% !important; }
 
 table {
   width: 100%; }
